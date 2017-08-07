@@ -1,0 +1,111 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:20:1-50:12
+	package
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:21:5-50
+	android:versionName
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:23:5-30
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:22:5-28
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:20:11-69
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:31:5-89
+	android:required
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:31:64-87
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:31:19-63
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:33:5-67
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:33:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:34:5-73
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:34:22-71
+application
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:36:5-48:19
+MERGED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/apple/.android/build-cache/4ba77b1e95a54d7b5561e388d193d3495b5e4346/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/apple/.android/build-cache/15e0afe7426cd5deb5b3228a4933c5751f121842/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apple/.android/build-cache/e61b757cc00c7ae3e5b8fc579ec3d558dd993558/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apple/.android/build-cache/3083241beff86324a67f31280c190a582dd69ad7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apple/.android/build-cache/b2b6514c9a7bbbf37cc69c8978f98753ecc98c99/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apple/.android/build-cache/ea71b8e865063b73c673710f3fcd61031d35cceb/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apple/.android/build-cache/a3af3b20044534f1a8309b93cab10b2d6b30fdd1/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/apple/.android/build-cache/22e1b3e74fafe6725df6deaa5702a5c600c87e34/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/apple/.android/build-cache/19abea86229c308063a9e02e610ac14581c702a5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apple/.android/build-cache/8acda4ba25d1a9f997896c26a658edb90192fb95/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:36:18-50
+	android:icon
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:37:9-45
+	android:theme
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:38:9-56
+activity#com.example.android.bluetoothlegatt.DeviceScanActivity
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:39:9-45:20
+	android:label
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:40:13-45
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:39:19-53
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:41:13-44:29
+action#android.intent.action.MAIN
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:42:17-68
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:42:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:43:17-76
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:43:27-74
+activity#com.example.android.bluetoothlegatt.DeviceControlActivity
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:46:9-58
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:46:19-56
+service#com.example.android.bluetoothlegatt.BluetoothLeService
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:9-77
+	android:enabled
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:53-75
+	android:name
+		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:18-52
+uses-sdk
+INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/apple/.android/build-cache/4ba77b1e95a54d7b5561e388d193d3495b5e4346/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/apple/.android/build-cache/15e0afe7426cd5deb5b3228a4933c5751f121842/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apple/.android/build-cache/e61b757cc00c7ae3e5b8fc579ec3d558dd993558/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apple/.android/build-cache/3083241beff86324a67f31280c190a582dd69ad7/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apple/.android/build-cache/b2b6514c9a7bbbf37cc69c8978f98753ecc98c99/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apple/.android/build-cache/ea71b8e865063b73c673710f3fcd61031d35cceb/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apple/.android/build-cache/a3af3b20044534f1a8309b93cab10b2d6b30fdd1/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/apple/.android/build-cache/22e1b3e74fafe6725df6deaa5702a5c600c87e34/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/apple/.android/build-cache/19abea86229c308063a9e02e610ac14581c702a5/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apple/.android/build-cache/8acda4ba25d1a9f997896c26a658edb90192fb95/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/apple/.android/build-cache/4ba77b1e95a54d7b5561e388d193d3495b5e4346/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/apple/.android/build-cache/15e0afe7426cd5deb5b3228a4933c5751f121842/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apple/.android/build-cache/e61b757cc00c7ae3e5b8fc579ec3d558dd993558/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apple/.android/build-cache/3083241beff86324a67f31280c190a582dd69ad7/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apple/.android/build-cache/b2b6514c9a7bbbf37cc69c8978f98753ecc98c99/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apple/.android/build-cache/ea71b8e865063b73c673710f3fcd61031d35cceb/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apple/.android/build-cache/a3af3b20044534f1a8309b93cab10b2d6b30fdd1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/apple/.android/build-cache/22e1b3e74fafe6725df6deaa5702a5c600c87e34/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/apple/.android/build-cache/19abea86229c308063a9e02e610ac14581c702a5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apple/.android/build-cache/8acda4ba25d1a9f997896c26a658edb90192fb95/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v13:25.3.1] /Users/apple/.android/build-cache/39e1752150315a24ed1d2e08c1a75121326aa6af/output/AndroidManifest.xml:26:9-47

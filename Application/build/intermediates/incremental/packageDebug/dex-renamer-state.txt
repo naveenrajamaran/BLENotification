@@ -1,0 +1,7 @@
+#Mon Aug 07 18:32:50 IST 2017
+base.0=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_2b63f69d3ee2eb6e0c26ef5723774b12d6ed8dd8
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9975f40efea6ed37c6ffe14bc99eb6afe3f3b5ae/classes.dex
+base.1=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9975f40efea6ed37c6ffe14bc99eb6afe3f3b5ae
+file.0=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_2b63f69d3ee2eb6e0c26ef5723774b12d6ed8dd8/classes.dex
