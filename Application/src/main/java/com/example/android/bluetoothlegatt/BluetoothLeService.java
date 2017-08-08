@@ -32,6 +32,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -63,6 +64,7 @@ public class BluetoothLeService extends Service {
     public final static String EXTRA_DATA =
             "com.example.bluetooth.le.EXTRA_DATA";
 
+
     public final static UUID UUID_HEART_RATE_MEASUREMENT =
             UUID.fromString(SampleGattAttributes.HEART_RATE_MEASUREMENT);
     public final static  UUID UUID_BATTERY_MEASUREMENT =
@@ -72,9 +74,12 @@ public class BluetoothLeService extends Service {
     public final static  UUID UUID_BUTTON_2_MEASUREMENT =
             UUID.fromString(SampleGattAttributes.BUTTON_2_MEASUREMENT);
 
+    List<BluetoothGattCharacteristic> chars = new ArrayList<>();
+
     // Implements callback methods for GATT events that the app cares about.  For example,
     // connection change and services discovered.
     private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
+
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             String intentAction;
@@ -97,6 +102,15 @@ public class BluetoothLeService extends Service {
 
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+
+            List<BluetoothGattService> services = gatt.getServices();
+
+            chars.add(services.get(2).getCharacteristics().get(0));
+            chars.add(services.get(2).getCharacteristics().get(1));
+            chars.add(services.get(3).getCharacteristics().get(0));
+
+            requestCharacteristics(gatt);
+
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
             } else {
@@ -111,14 +125,33 @@ public class BluetoothLeService extends Service {
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
             }
+            setCharacteristicNotification(chars.get(chars.size() - 1), true);
         }
 
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt,
                                             BluetoothGattCharacteristic characteristic) {
             broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+            chars.remove(chars.get(chars.size() - 1));
+            if (chars.size() > 0) {
+                requestCharacteristics(gatt);
+            }
+        }
+
+        @Override
+        public void onDescriptorWrite(BluetoothGatt gatt,
+                                      BluetoothGattDescriptor descriptor,
+                                      int status){
+
+
+        }
+        
+        public void requestCharacteristics(BluetoothGatt gatt){
+            gatt.readCharacteristic(chars.get(chars.size()-1));
+
         }
     };
+
 
     private void broadcastUpdate(final String action) {
         final Intent intent = new Intent(action);
@@ -145,16 +178,44 @@ public class BluetoothLeService extends Service {
             final int heartRate = characteristic.getIntValue(format, 1);
             Log.d(TAG, String.format("Received heart rate: %d", heartRate));
             intent.putExtra(EXTRA_DATA, String.valueOf(heartRate));
-        } else {
+        }
+        else if(UUID_BUTTON_1_MEASUREMENT.equals(characteristic.getUuid())) {
             // For all other profiles, writes the data formatted in HEX.
             final byte[] data = characteristic.getValue();
             if (data != null && data.length > 0) {
                 final StringBuilder stringBuilder = new StringBuilder(data.length);
                 for(byte byteChar : data)
                     stringBuilder.append(String.format("%02X ", byteChar));
-                intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
+                intent.putExtra(EXTRA_DATA, "a"+ new String(data) + "\n" + stringBuilder.toString());
+            }
+
+
+        }
+        else if(UUID_BUTTON_2_MEASUREMENT.equals(characteristic.getUuid())) {
+            // For all other profiles, writes the data formatted in HEX.
+            final byte[] data = characteristic.getValue();
+            if (data != null && data.length > 0) {
+                final StringBuilder stringBuilder = new StringBuilder(data.length);
+                for(byte byteChar : data)
+                    stringBuilder.append(String.format("%02X ", byteChar));
+                intent.putExtra(EXTRA_DATA, "b"+ new String(data) + "\n" + stringBuilder.toString());
             }
         }
+        else if(UUID_BATTERY_MEASUREMENT.equals(characteristic.getUuid())){
+            // For all other profiles, writes the data formatted in HEX.
+            final byte[] data = characteristic.getValue();
+
+            if (data != null && data.length > 0) {
+                final StringBuilder stringBuilder = new StringBuilder(data.length);
+                for(byte byteChar : data)
+                    stringBuilder.append(String.format("%02X ", byteChar));
+                intent.putExtra(EXTRA_DATA,"c" + characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_SINT8, 0));
+            }
+//            final int data = characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT16,0);
+//            intent.putExtra(EXTRA_DATA, String.valueOf(data));
+
+        }
+
         sendBroadcast(intent);
     }
 
@@ -308,6 +369,7 @@ public class BluetoothLeService extends Service {
                     UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
             mBluetoothGatt.writeDescriptor(descriptor);
+
         }
         if (UUID_BUTTON_2_MEASUREMENT.equals(characteristic.getUuid())) {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(

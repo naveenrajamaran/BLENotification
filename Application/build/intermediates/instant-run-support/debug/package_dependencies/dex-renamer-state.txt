@@ -1,4 +1,4 @@
-#Mon Aug 07 17:32:36 IST 2017
+#Tue Aug 08 15:30:30 IST 2017
 file.2=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10/classes_06219ccbed04b074f597c404290c4306a179a387/classes.dex
 base.2=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10/classes_06219ccbed04b074f597c404290c4306a179a387
 file.1=/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_7f4cc0a555adbbf32912cf702bb1383bf12256e7/classes.dex

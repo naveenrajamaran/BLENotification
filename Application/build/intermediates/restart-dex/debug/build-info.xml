@@ -2,46 +2,40 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="22"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="xxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1502110966111"
+    timestamp="1502192168713"
     token="-189807316954551853"
-    verifier="R_CLASS_CHANGE" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="274" />
+        duration="198" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="895" />
     <task
         name="instant-run-transform"
-        duration="21" />
+        duration="25" />
     <task
         name="verifier"
-        duration="3" />
+        duration="2" />
 
     <artifact
-        location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/outputs/apk/Application-debug.apk"
-        type="SPLIT_MAIN" />
+        location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1502110145465"
+        timestamp="1502188868386"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/outputs/apk/Application-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -53,10 +47,10 @@
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -70,17 +64,28 @@
         <artifact
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/outputs/apk/Application-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1502110966111"
-        verifier="R_CLASS_CHANGE" >
+        timestamp="1502191927305"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/outputs/apk/Application-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1502192168713"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

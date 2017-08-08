@@ -53,6 +53,8 @@ public class DeviceControlActivity extends Activity {
 
     private TextView mConnectionState;
     private TextView mDataField;
+    private TextView mDataField1;
+    private TextView mDataField2;
     private String mDeviceName;
     private String mDeviceAddress;
     private ExpandableListView mGattServicesList;
@@ -64,6 +66,11 @@ public class DeviceControlActivity extends Activity {
 
     private final String LIST_NAME = "NAME";
     private final String LIST_UUID = "UUID";
+
+    private int[] serviceArrayRow= {3,3,2,2,2,2};
+    private int[] serviceArrayColumn = {0,0,0,0,1,1};
+    private int i = 0;
+    private int j = 0;
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -107,9 +114,17 @@ public class DeviceControlActivity extends Activity {
             } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
                 // Show all the supported services and characteristics on the user interface.
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
-                readValue();
+
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
-                displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                if (intent.getStringExtra(BluetoothLeService.EXTRA_DATA).substring(0, 1).equals("c")) {
+                    displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                }
+                if (intent.getStringExtra(BluetoothLeService.EXTRA_DATA).substring(0, 1).equals("a")) {
+                    displayData1(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                }
+                if (intent.getStringExtra(BluetoothLeService.EXTRA_DATA).substring(0, 1).equals("b")) {
+                    displayData2(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                }
             }
         }
     };
@@ -148,34 +163,12 @@ public class DeviceControlActivity extends Activity {
 //                }
 //    };
 //
-    public boolean readValue(){
-        if (mGattCharacteristics != null) {
-            final BluetoothGattCharacteristic characteristic =
-                    mGattCharacteristics.get(3).get(0);
-            final int charaProp = characteristic.getProperties();
-            if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
-                // If there is an active notification on a characteristic, clear
-                // it first so it doesn't update the data field on the user interface.
-                if (mNotifyCharacteristic != null) {
-                    mBluetoothLeService.setCharacteristicNotification(
-                            mNotifyCharacteristic, false);
-                    mNotifyCharacteristic = null;
-                }
-                mBluetoothLeService.readCharacteristic(characteristic);
-            }
-            if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
-                mNotifyCharacteristic = characteristic;
-                mBluetoothLeService.setCharacteristicNotification(
-                        characteristic, true);
-            }
-            return true;
-        }
-        return false;
-    }
 
     private void clearUI() {
         //mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
         mDataField.setText(R.string.no_data);
+        mDataField1.setText("No data");
+        mDataField2.setText("No data");
     }
 
     @Override
@@ -193,6 +186,8 @@ public class DeviceControlActivity extends Activity {
 //        mGattServicesList.setOnChildClickListener(servicesListClickListner);
 //        mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
+        mDataField1 = (TextView) findViewById(R.id.button_1);
+        mDataField2 = (TextView) findViewById(R.id.button_2);
 
         getActionBar().setTitle(mDeviceName);
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -263,9 +258,28 @@ public class DeviceControlActivity extends Activity {
 
     private void displayData(String data) {
         if (data != null) {
-            mDataField.setText(data);
+
+            mDataField.setText(data.substring(1));
+
         }
-        readValue();
+
+
+    }
+    private void displayData1(String data) {
+        if (data != null) {
+            mDataField1.setText(data.substring(2));
+
+        }
+
+
+    }
+    private void displayData2(String data) {
+        if (data != null) {
+            mDataField2.setText(data.substring(2));
+
+        }
+
+
     }
 
     // Demonstrates how to iterate through the supported GATT Services/Characteristics.
@@ -336,3 +350,4 @@ public class DeviceControlActivity extends Activity {
         return intentFilter;
     }
 }
+
