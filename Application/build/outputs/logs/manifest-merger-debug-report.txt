@@ -67,7 +67,7 @@ ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/ma
 	android:name
 		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:46:19-56
 service#com.example.android.bluetoothlegatt.BluetoothLeService
-ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:9-77
+ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:9-78
 	android:enabled
 		ADDED from /Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/AndroidManifest.xml:47:53-75
 	android:name

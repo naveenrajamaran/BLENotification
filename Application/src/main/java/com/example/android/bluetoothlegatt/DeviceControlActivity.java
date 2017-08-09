@@ -267,15 +267,18 @@ public class DeviceControlActivity extends Activity {
     }
     private void displayData1(String data) {
         if (data != null) {
-            mDataField1.setText(data.substring(2));
-
+            mDataField1.setText(data.substring(3));
+            if(data.substring(3,5).equals("01")){
+                Intent googleNowIntent = new Intent("android.intent.action.VOICE_ASSIST");
+                startActivity(googleNowIntent);
+            }
         }
 
 
     }
     private void displayData2(String data) {
         if (data != null) {
-            mDataField2.setText(data.substring(2));
+            mDataField2.setText(data.substring(3));
 
         }
 
