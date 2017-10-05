@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/apple/Code/Android/android-ble-notification/Application/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
+        "source": "/Users/apple/Code/Android/android-ble-notification/Application/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/apple/AndroidStudioProjects/BLENotification/Application/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
         "source": "/Users/apple/AndroidStudioProjects/BLENotification/Application/src/main/res/drawable-xhdpi/ic_launcher.png"
     }
